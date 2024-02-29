@@ -20,6 +20,13 @@ spec:
     spec:
       containers:
         - image: docker.io/adminer
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
           imagePullPolicy: Always
           livenessProbe:
             failureThreshold: 3
